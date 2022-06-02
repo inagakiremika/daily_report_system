@@ -71,7 +71,7 @@ public class EmployeeConverter {
 
 	//Viewモデルの全フィールドの内容をDTOモデルのフィールドにコピー
 	//e DTOモデル（コピー先）    /     ev Viewモデル（コピー元）
-	public static void copyViewModel(Employee e, EmployeeView ev) {
+	public static void copyViewToModel(Employee e, EmployeeView ev) {
 		e.setId(ev.getId());
 		e.setCode(ev.getCode());
 		e.setName(ev.getName());
