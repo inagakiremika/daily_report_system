@@ -7,33 +7,54 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+/**
+ * 従業員情報について画面の入力値・出力値を扱うViewモデル
+ *
+ */
+@Getter //全てのクラスフィールドについてgetterを自動生成する(Lombok)
+@Setter //全てのクラスフィールドについてsetterを自動生成する(Lombok)
+@NoArgsConstructor //引数なしコンストラクタを自動生成する(Lombok)
+@AllArgsConstructor //全てのクラスフィールドを引数にもつ引数ありコンストラクタを自動生成する(Lombok)
 public class EmployeeView {
-	//id
-	private Integer id;
 
-	//社員番号
-	private String code;
+    /**
+     * id
+     */
+    private Integer id;
 
-	//氏名
-	private String name;
+    /**
+     * 社員番号
+     */
+    private String code;
 
-	//パスワード
-	private String password;
+    /**
+     * 氏名
+     */
+    private String name;
 
-	//管理者権限があるかどうか
-	private Integer adminFlag;
+    /**
+     * パスワード
+     */
+    private String password;
 
-	//登録日時
-	private LocalDateTime createdAt;
+    /**
+     * 管理者権限があるかどうか（一般：0、管理者：1）
+     */
+    private Integer adminFlag;
 
-	//更新日時
-	private LocalDateTime updatedAt;
+    /**
+     *登録日時
+     */
+    private LocalDateTime createdAt;
 
-	//削除された従業員かどうか（現役：０、削除済み：１）
-	private Integer deleteFlag;
+    /**
+     * 更新日時
+     */
+    private LocalDateTime updatedAt;
+
+    /**
+     * 削除された従業員かどうか（現役：0、削除済み：1）
+     */
+    private Integer deleteFlag;
 
 }
